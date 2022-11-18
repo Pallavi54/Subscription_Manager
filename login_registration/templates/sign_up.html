@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign_up</title>
+    <style>
+.headerbg{
+background-color: #00000057;
+border: 1px solid #000;
+width: 60%;
+    margin: auto;
+    padding: 0 5%;
+    font-size: 18px;
+}
+
+.headerbg h1{
+text-align:center;
+}
+
+.sign{
+        padding:20px 50px;
+margin: 10px 0;
+margin: 10px auto;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="headerbg">
+<h1>SIGN UP</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="sign" type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>
